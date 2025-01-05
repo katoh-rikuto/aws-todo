@@ -14,7 +14,7 @@ export class TodoService {
                 if (!res.ok) {
                     throw new Error('HTTP error! Status: ${res.status}');
                 }
-                return res.json;
+                return res.json();
             })
             .catch((error) => {
                 console.error("API error:", error);
